@@ -1,11 +1,15 @@
 <idea-plugin>
     <id>com.dsazup.scanmode</id>
-    <name>Plugin display name here</name>
-    <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+    <name>Scan Mode</name>
+    <vendor url="https://github.com/dsazup/scanmode">dsazup</vendor>
 
     <description><![CDATA[
-    Enter short description for your plugin here.<br>
-    <em>most HTML tags may be used</em>
+        Scan mode is a plugin which allows you to toggle font size and line spacing by a keyboard shortcut.<br/>
+        This is useful if you want to see a bigger picture of your code and switch back. <br/><br/>
+
+        To change font size and line spacing go to Settings -> Tools -> Scan mode settings <br/>
+        To toggle it, click View -> Appearance -> Enter scan mode (or Exit Scan mode). <br/><br/>
+        By default it is mapped to alt+shift+S but feel free to change it to whatever feels good for you.
     ]]></description>
 
     <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
@@ -13,15 +17,14 @@
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.dsazup.scanmode.settings.AppSettingsState"/>
-        <applicationConfigurable parentId="tools" instance="com.dsazup.scanmode.settings.AppSettingsConfigurable"
-                                 id="com.dsazup.scanmode.settings.AppSettingsConfigurable"
-                                 displayName="SDK: Application Settings Example"/>
+        <applicationService serviceImplementation="com.dsazup.scanmode.settings.ScanModeSettings"/>
+        <applicationConfigurable parentId="tools" instance="com.dsazup.scanmode.settings.ScanModeConfigurable"/>
     </extensions>
     <actions>
-        <action id="com.dsazup.scanmode.action.PopupDialogAction" class="com.dsazup.scanmode.action.PopupDialogAction"
-                text="Enter Scan Mode">
-            <add-to-group group-id="ToggleFullScreenGroup" anchor="last"/>
+        <action id="com.dsazup.scanmode.action.ToggleScanModeAction"
+                class="com.dsazup.scanmode.action.ToggleScanModeAction" text="Enter Scan Mode">
+            <add-to-group group-id="ToggleFullScreenGroup" anchor="first"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="shift alt S"/>
         </action>
     </actions>
 </idea-plugin>
