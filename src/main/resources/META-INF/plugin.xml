@@ -1,0 +1,27 @@
+<idea-plugin>
+    <id>com.dsazup.scanmode</id>
+    <name>Plugin display name here</name>
+    <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+
+    <description><![CDATA[
+    Enter short description for your plugin here.<br>
+    <em>most HTML tags may be used</em>
+    ]]></description>
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <applicationService serviceImplementation="com.dsazup.scanmode.settings.AppSettingsState"/>
+        <applicationConfigurable parentId="tools" instance="com.dsazup.scanmode.settings.AppSettingsConfigurable"
+                                 id="com.dsazup.scanmode.settings.AppSettingsConfigurable"
+                                 displayName="SDK: Application Settings Example"/>
+    </extensions>
+    <actions>
+        <action id="com.dsazup.scanmode.action.PopupDialogAction" class="com.dsazup.scanmode.action.PopupDialogAction"
+                text="Enter Scan Mode">
+            <add-to-group group-id="ToggleFullScreenGroup" anchor="last"/>
+        </action>
+    </actions>
+</idea-plugin>
