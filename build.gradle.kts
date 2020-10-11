@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "com.dsazup"
-version = "1.0"
+version = "1.0.1"
 
 repositories {
     mavenCentral()
@@ -14,9 +14,8 @@ dependencies {
     implementation(kotlin("stdlib"))
 }
 
-// See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
-    version = "2020.2.3"
+    version = "2020.2"
 }
 tasks.getByName<org.jetbrains.intellij.tasks.PatchPluginXmlTask>("patchPluginXml") {
     changeNotes("""

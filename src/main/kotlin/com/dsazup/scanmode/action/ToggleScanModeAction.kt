@@ -14,7 +14,6 @@ class ToggleScanModeAction: AnAction() {
     private var defaultFontSize: Int = EditorFontsConstants.getDefaultEditorFontSize()
     private var defaultLineSpacing: Float = EditorFontsConstants.getDefaultEditorLineSpacing()
 
-
     override fun update(e: AnActionEvent) {
         val project: @Nullable Project? = e.project
         e.presentation.isEnabledAndVisible = project != null;
@@ -36,9 +35,8 @@ class ToggleScanModeAction: AnAction() {
             defaultFontSize = editor.colorsScheme.editorFontSize
             defaultLineSpacing = editor.colorsScheme.lineSpacing
 
-
-            editor.colorsScheme.editorFontSize = settings.fontSize.toInt()
-            editor.colorsScheme.lineSpacing = settings.lineSpacing.toFloat()
+            editor.colorsScheme.editorFontSize = settings.fontSize
+            editor.colorsScheme.lineSpacing = settings.lineSpacing
 
             scanMode = true
         }
