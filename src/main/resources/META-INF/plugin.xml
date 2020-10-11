@@ -4,13 +4,34 @@
     <vendor url="https://github.com/dsazup/scanmode">dsazup</vendor>
 
     <description><![CDATA[
-        Scan mode is a plugin which allows you to toggle font size and line spacing by a keyboard shortcut.<br/>
-        This is useful if you want to see a bigger picture of your code and switch back. <br/><br/>
+        <b>Intellij Scan Mode</b>
+        <br/>
+        Toggle font size and line spacing by keyboard shortcut. A plugin for IntelliJ based IDEs. <br/><br/>
 
         To change font size and line spacing go to Settings -> Tools -> Scan mode settings <br/>
         To toggle it, click View -> Appearance -> Enter scan mode (or Exit Scan mode). <br/><br/>
         By default it is mapped to alt+shift+S but feel free to change it to whatever feels good for you.
+
+        <p>
+            <img src="https://raw.githubusercontent.com/dsazup/scanmode/main/screenshots/usage.gif" alt="usage gif">
+        </p>
     ]]></description>
+
+    <change-notes><![CDATA[
+        <p>1.0.1</p>
+        <ul>
+            <li>Changed build version to 2020.2</li>
+            <li>Added usage gif</li>
+            <li>Updated description</li>
+        </ul>
+        <br/>
+
+        <p>1.0</p>
+        <ul>
+            <li>Initial release</li>
+        </ul>
+   ]]>
+    </change-notes>
 
     <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
          on how to target different products -->
