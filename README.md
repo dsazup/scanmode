@@ -10,6 +10,6 @@
 
 ## Install
 
-<a href="https://plugins.jetbrains.com/embeddable/install/15191">
+<a href="https://plugins.jetbrains.com/plugin/15191-scan-mode">
     <img src="https://user-images.githubusercontent.com/56412414/96349009-b1498b00-10a4-11eb-969f-8ee35f8c009e.png" width="250"/>
 </a>
