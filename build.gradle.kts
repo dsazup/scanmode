@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "com.dsazup"
-version = "1.0.1"
+version = "1.0.2"
 
 repositories {
     mavenCentral()
@@ -15,5 +15,5 @@ dependencies {
 }
 
 intellij {
-    version = "2020.2"
+    version = "2020.3"
 }
